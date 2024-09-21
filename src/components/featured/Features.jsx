@@ -34,11 +34,9 @@ const Features = () => {
       animate="visible"
     >
       <div className="title">
-        <h1 className="text-[52px] mt-10 mb-20 leading-[1.1428571429] font-[600] tracking-[.007em] text-white">
-          Features We Offer:
-        </h1>
+        <h1 className="title">Features We Offer:</h1>
       </div>
-      <motion.div className="flex w-[100%] mx-auto  gap-6  xl:flex-row flex-col">
+      <motion.div className="flex w-[100%] mt-20 mx-auto  gap-6  xl:flex-row flex-col">
         <motion.div variants={cardVariants}>
           <FeatureCard
             imgUrl={img1}
