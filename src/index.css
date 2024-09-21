@@ -3,4 +3,14 @@
 @tailwind utilities;
 body {
   background-color: #0f0e0e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.title {
+  font-size: 52px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  color: white; /* or use hex code for white: #ffffff */
 }
