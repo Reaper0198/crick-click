@@ -1,13 +1,14 @@
-import './App.css'
-import Navbar from './components/navbar/Navbar'
+import "./App.css";
+import Features from "./components/featured/Features";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
-
   return (
     <>
-    <Navbar/>
+      <Navbar />
+      <Features />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
