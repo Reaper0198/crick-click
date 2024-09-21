@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); 
 
   return (
+
     <nav className="bg-[rgba(0,0,0,0.6)] z-10 fixed top-0 left-0 w-full text-white px-4 py-4">
       <div className="flex justify-around items-center"> 
 
@@ -100,6 +101,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+
   );
 };
 
