@@ -3,4 +3,5 @@
 @tailwind utilities;
 body {
   background-color: #0f0e0e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
