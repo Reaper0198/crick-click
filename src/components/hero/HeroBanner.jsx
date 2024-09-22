@@ -9,10 +9,10 @@ export default function HeroBanner() {
     <div className="text-white w-full flex flex-col md:flex-row justify-evenly items-center h-screen bg-cover bg-center relative">
       {/* Left Section: Text and Button */}
       <div className="p-6 md:w-1/2 text-center md:text-left">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+        <h1 className="title mb-4">
           Join the Thrill of Cricket
         </h1>
-        <p className="text-lg mb-6">
+        <p className="text-xl mb-6">
           Register now for upcoming tournaments in various formats and showcase
           your talent.
         </p>
