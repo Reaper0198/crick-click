@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroBanner from "./components/hero/HeroBanner";
 import Navbar from "./components/navbar/Navbar";
@@ -19,13 +18,11 @@ const bgStyles = {
   opacity: "0.2", // Set the opacity only for the background image
 };
 
-
-import Footer from './components/footer/Footer'
-import Testimony from './components/testimony/Testimony'
+import Footer from "./components/footer/Footer";
+import Testimony from "./components/testimony/Testimony";
 import "./App.css";
 import Features from "./components/featured/Features";
-
-
+import LiveScore from "./components/livescore/LiveScore";
 
 function App() {
   return (
@@ -46,6 +43,7 @@ function App() {
       </Routes>
         </BrowserRouter>
     </div>
+
 
   );
 }
