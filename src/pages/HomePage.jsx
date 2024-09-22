@@ -7,12 +7,12 @@ import Testimony from '../components/testimony/Testimony'
 export default function HomePage() {
   return (
     <div>
-      
-      <HeroBanner />
-      <LiveScore />
-      <Features />
-      <Testimony />
-      
+        <HeroBanner />
+        <LiveScore />
+        <Features />
+        <Testimony />
+        
+
     </div>
   )
 }
