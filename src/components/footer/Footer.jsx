@@ -6,7 +6,7 @@ import group1 from "../../assets/group1.png"
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className='footer md:h-96'>
             <hr className="h-px my-2 bg-white border-0 "></hr>
             <div className='text-white flex max-md:flex-col pt-5 gap-4 m-6 mx-10 md:mx-48 justify-between'>
                 

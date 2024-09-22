@@ -27,7 +27,6 @@ function App() {
       <Navbar />
       <HeroBanner />
       <LiveScore />
-      <Navbar />
       <Features />
       <Testimony />
       <Footer />
