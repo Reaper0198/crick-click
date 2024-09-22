@@ -1,0 +1,15 @@
+.swiper-button-next, .swiper-button-prev {
+    position: relative;
+    background: white;
+    top: 200px; 
+    width: 30px;
+    height: 30px;
+  }
+  
+  .swiper-button-next {
+    right: 0;
+  }
+  
+  .swiper-button-prev {
+    left: 0;
+  }
