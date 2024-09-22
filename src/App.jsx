@@ -41,6 +41,7 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/tickets" element={<TicketsPage />} />
       </Routes>
+      <Footer />
         </BrowserRouter>
     </div>
 
