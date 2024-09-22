@@ -2,6 +2,13 @@ import React from "react";
 import HeroBanner from "./components/hero/HeroBanner";
 import Navbar from "./components/navbar/Navbar";
 import bg from "./assets/bg.png"; // Import the background image
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
+import SchedulePage from "./pages/SchedulePage";
+import NewsPage from "./pages/NewsPage";
+import TicketsPage from "./pages/TicketsPage";
 
 // Define the bgStyles variable
 const bgStyles = {
@@ -19,18 +26,26 @@ import LiveScore from "./components/livescore/LiveScore";
 
 function App() {
   return (
-    <>
-      {/* Background Image Div */}
-      <div className="absolute inset-0 -z-10 bg-black" style={bgStyles} />
-
-      {/* Content */}
+    <div>
+      <BrowserRouter>
+      <div
+        className="absolute inset-0 -z-10 bg-black"
+        style={bgStyles}
+        />
       <Navbar />
-      <HeroBanner />
-      <LiveScore />
-      <Features />
-      <Testimony />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sign-in" element={<SignInPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />  
+        <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/tickets" element={<TicketsPage />} />
+      </Routes>
       <Footer />
-    </>
+        </BrowserRouter>
+    </div>
+
+
   );
 }
 
