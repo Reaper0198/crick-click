@@ -33,7 +33,6 @@ function App() {
       {/* Content */}
       <Navbar />
       <HeroBanner />
-
       <Navbar />
       <Features />
       <Testimony/>
