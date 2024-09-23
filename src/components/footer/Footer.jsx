@@ -7,7 +7,7 @@ import group1 from "../../assets/group1.png"
 const Footer = () => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
 
-    if(user.email === 'admin@gmail.com'){
+    if(user?.email === 'admin@gmail.com'){
         return null;
     }
 

@@ -51,19 +51,10 @@ export default function DashSidebar() {
           >
             <FaUser className="text-xl" />
             Profile
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/dashboard?tab=addStadium"
-            className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${
-              tab === 'addStadium' ? 'bg-green-600 text-white' : 'hover:bg-gray-700'
-            }`}
-          >
-            Add Stadium
-          </Link>
-        </li>
-        <li>
+          </Link>)
+            }
+            {
+                user.email==="user@gmail.com"  && (
           <Link
             to={`/${
               user.password === "admin" ? "dashborad" : "profile"
@@ -173,6 +164,22 @@ export default function DashSidebar() {
 
                 )
           }
+        </li>
+        <li>
+            {
+                user.email === "admin@gmail.com" && (
+          <Link
+            to="/dashboard?tab=addStadium"
+            className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${
+                tab === "addStadium"
+                  ? "bg-yellow-300 text-gray-900"
+                  : "hover:bg-gray-700"
+              }`}
+          >
+            Add Stadium
+          </Link>
+                )
+            }
         </li>
           
         </ul>
