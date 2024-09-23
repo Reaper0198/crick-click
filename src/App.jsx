@@ -45,6 +45,8 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/news/:id" element={<NewsDetails />} />
+        <Route path="/match/:id" element={<MatchDetails/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

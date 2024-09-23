@@ -5,6 +5,11 @@ import { FaTwitter } from "react-icons/fa6";
 import group1 from "../../assets/group1.png"
 
 const Footer = () => {
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    if(user.email === 'admin@gmail.com'){
+        return null;
+    }
+
     return (
         <div className='footer md:h-full bg-black'>
             <hr className="h-px  bg-white border-0 "></hr>

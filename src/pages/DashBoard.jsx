@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import DashSidebar from '../components/dasboard/DashSidebar';
+import AddStadium from '../components/admin/AddStadium';
 
 export default function DashBoard() {
   const location = useLocation();
@@ -34,13 +35,20 @@ export default function DashBoard() {
     </div>
   );
 
+  const stadiumPage = (
+    <div className="p-6">
+        <AddStadium/>
+    </div>
+  );
+
   return (
-    <div className='bg-black h-screen  mx-auto'>
-      <div className='flex flex-col md:flex-row h-screen'>
+    <div className='bg-black min-h-screen  mx-auto'>
+      <div className='flex flex-col md:flex-row h-full'>
         <DashSidebar />
-        <div className='w-full md:w-2/3 mx-auto p-4'>
+        <div className='w-full h-full md:w-2/3 mx-auto p-4'>
           {tab === 'profile' && profilePage}
           {tab === 'matches' && matchPage}
+          {tab === 'addStadium' && stadiumPage}
           {/* Add more tabs as needed */}
         </div>
       </div>
