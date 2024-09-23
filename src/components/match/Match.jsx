@@ -15,13 +15,13 @@ const Match = () => {
     "Mohammed Siraj",
     "Yuzvendra Chahal",
   ];
-  const runs = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
-  const balls = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
+  const runs = [3, 23, 54, 48, 0, 0, 0, 0, 0, 0, 0];
+  const balls = [6, 26, 33, 25, 0, 0, 0, 0, 0, 0, 0];
   const bowlers = ["Malinga", "Johnson", "Starc", "Cummins", "Rabada"];
-  const overs = [4, 4, 4, 4, 4];
-  const bowler_runs = [10, 20, 30, 40, 50];
-  const wkts = [1, 2, 3, 4, 5];
-  const economy = [5, 6, 7, 8, 9];
+  const overs = [4, 4, 4, 2.3, 1];
+  const bowler_runs = [44, 25, 25, 20, 14];
+  const wkts = [1, 0, 0, 1, 0];
+  const economy = [11, 6.25, 6.25, 8.6, 14];
 
   return (
     <motion.div
@@ -31,24 +31,21 @@ const Match = () => {
       className="bg-black flex justify-center items-center h-full mt-[70px]"
     >
       <div className="mt-10 flex flex-col mb-10 bg-[#1b1b1b] rounded-[28px] shadow-lg p-8">
-        {/* Title */}
         <div className="title text-2xl font-bold text-yellow-300 p-4 text-center">
           Lucknow Vs Kanpur
         </div>
 
-        {/* Scores */}
         <div className="scores flex justify-between mx-10 text-white border-b border-gray-700 pb-4 mb-4">
           <div>
             <p className="font-bold">Lucknow</p>
             <p className="font-bold">Kanpur</p>
           </div>
           <div>
-            <p className="text-xl font-bold">128/2</p>
+            <p className="text-xl font-bold">128/2 (15.3) </p>
             <p className="text-xl font-thin">Yet to bat</p>
           </div>
         </div>
 
-        {/* Batters Scorecard */}
         <div className="scorecard flex justify-between mx-10 text-gray-300">
           <div className="w-1/3">
             <h1 className="text-lg font-semibold mb-2">Batters</h1>
@@ -78,7 +75,6 @@ const Match = () => {
           </div>
         </div>
 
-        {/* Bowlers Stats */}
         <div className="text-gray-200 flex mx-10 justify-between mt-10">
           <div className="bowlers w-1/4">
             <h1 className="text-lg font-semibold mb-2">Bowlers</h1>
