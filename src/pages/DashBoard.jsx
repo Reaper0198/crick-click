@@ -1,31 +1,54 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import DashSidebar from '../components/dasboard/DashSidebar';
-import UserProfile from '../components/user/UserProfile';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import DashSidebar from "../components/dasboard/DashSidebar";
+import AddAMatch from "../components/dasboard/Match/AddAMatch";
+import AddANews from "../components/dasboard/News/AddANews";
+import AddATournament from "../components/dasboard/tournament/AddATournament";
 
 export default function DashBoard() {
   const location = useLocation();
   const [tab, setTab] = useState(() => {
     const urlParams = new URLSearchParams(location.search);
-    return urlParams.get('tab') || 'profile'; // Default to 'profile'
+    return urlParams.get("tab") || "profile"; // Default to 'profile'
   });
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const tabFormUrl = urlParams.get('tab');
+    const tabFormUrl = urlParams.get("tab");
     if (tabFormUrl) {
       setTab(tabFormUrl);
     }
   }, [location.search]);
-  console.log(tab==='profile');
 
+  const profilePage = (
+    <div className="p-6 bg-gray-900 rounded-lg shadow-lg"></div>
+  );
+
+  const matchPage = (
+    <div className="rounded-[28px] flex items-center justify-center h-full bg-gray-900  shadow-lg">
+      <AddAMatch />
+    </div>
+  );
+  const newsPage = (
+    <div className="rounded-[28px] flex items-center justify-center h-full bg-gray-900  shadow-lg">
+      <AddANews />
+    </div>
+  );
+
+  const tournamentPage = (
+    <div className="rounded-[28px] flex p-6 items-center justify-center h-full bg-gray-900  shadow-lg">
+      <AddATournament />
+    </div>
+  );
   return (
-    <div className='bg-black h-full mx-auto'>
-      <div className='flex flex-col md:flex-row h-full'>
+    <div className="bg-black max-h-screen mx-auto">
+      <div className="flex flex-col md:flex-row max-h-screen">
         <DashSidebar />
-        <div className='w-full bg-gray-900 md:w-2/3 mx-auto p-4'>
-          {tab === 'profile' && null}
-          {tab === 'matches' && matchPage}
+        <div className="w-full md:w-2/3 mx-auto p-4">
+          {tab === "profile" && profilePage}
+          {tab === "matches" && matchPage}
+          {tab === "news" && newsPage}
+          {tab === "tournament" && tournamentPage}
           {/* Add more tabs as needed */}
         </div>
       </div>
