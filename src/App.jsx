@@ -13,6 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import DashBoard from "./pages/DashBoard";
 import NewsDetails from "./pages/NewsDetails";
 import MatchDetails from "./pages/MatchDetails";
+import ProfilePage from "./pages/ProfilePage";
 
 const bgStyles = {
   backgroundImage: `url(${bg})`,
@@ -47,6 +48,9 @@ function App() {
         <Route path="/match/:id" element={<MatchDetails />} />
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/news/:id" element={<NewsDetails />} />
+        <Route path="/matches/:id" element={<MatchDetails />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
