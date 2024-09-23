@@ -11,8 +11,9 @@ import TicketsPage from "./pages/TicketsPage";
 import Footer from "./components/footer/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 import DashBoard from "./pages/DashBoard";
+import NewsDetails from "./pages/NewsDetails";
+import MatchDetails from "./pages/MatchDetails";
 
-// Define the bgStyles variable
 const bgStyles = {
   backgroundImage: `url(${bg})`,
   backgroundSize: "cover",
