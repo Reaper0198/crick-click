@@ -41,8 +41,8 @@ export default function DashBoard() {
     </div>
   );
   return (
-    <div className="bg-black max-h-screen mx-auto">
-      <div className="flex flex-col md:flex-row max-h-screen">
+    <div className="bg-black min-h-screen mx-auto">
+      <div className="flex flex-col md:flex-row min-h-screen">
         <DashSidebar />
         <div className="w-full md:w-2/3 mx-auto p-4">
           {tab === "profile" && profilePage}

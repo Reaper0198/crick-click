@@ -38,7 +38,7 @@ export default function DashSidebar() {
       <ul className="flex flex-col gap-4">
         <li>
             {
-                user.email==="user@gmail.com" || user.email==="team@gmail.com" && (
+                  user.email==="team@gmail.com" && (
           <Link
             to={`/${
               user.password === "admin" ? "dashborad" : "profile"
@@ -53,6 +53,23 @@ export default function DashSidebar() {
             Profile
           </Link>)
             }
+            {
+                user.email==="user@gmail.com"  && (
+          <Link
+            to={`/${
+              user.password === "admin" ? "dashborad" : "profile"
+            }?tab=profile`}
+            className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${
+              tab === "profile"
+                ? "bg-green-600 text-white"
+                : "hover:bg-gray-700"
+            }`}
+          >
+            <FaUser className="text-xl" />
+            Profile
+          </Link>)
+            }
+
             {
                 user.email==="admin@gmail.com" &&(
                     <Link
@@ -101,7 +118,7 @@ export default function DashSidebar() {
             </Link>
           )}
           {
-                user.email==="admin@gamil.com" && (
+                user.email==="admin@gmail.com" && (
                     <Link
                     to="/dashboard?tab=news"
                     className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${
@@ -132,7 +149,7 @@ export default function DashSidebar() {
             </Link>
           )}
           {
-                user.email==="admin@gamil.com" && (
+                user.email==="admin@gmail.com" && (
                     <Link
                     to="/dashboard?tab=tournament"
                     className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${
