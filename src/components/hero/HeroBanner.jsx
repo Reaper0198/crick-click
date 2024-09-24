@@ -8,8 +8,7 @@ import {motion} from 'framer-motion';
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('currentUser'));
-
+    const user = JSON.parse(localStorage.getItem("currentUser"));
   return (
     <div className="text-white w-full flex flex-col md:flex-row justify-evenly items-center h-screen bg-cover bg-center relative">
       {/* Left Section: Text and Button */}
