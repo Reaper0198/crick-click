@@ -78,7 +78,7 @@ export default function SignUpPage({setUser}) {
     e.preventDefault();
     if (validateForm()) {
       const { confirmPassword, ...data } = formData;
-      setUser(data)
+      // setUser(data)
         navigate('/');
         // Redirects after 2 seconds
       console.log('Form submitted successfully:', formData);
