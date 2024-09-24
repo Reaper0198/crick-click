@@ -21,6 +21,9 @@ export default function HeroBanner() {
           Register now for upcoming tournaments in various formats and showcase
           your talent.
         </p>
+        {!user
+          &&
+          (
         <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 255, 0, 0.5)" }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -28,6 +31,8 @@ export default function HeroBanner() {
           Get Started
           <FaArrowRight className="ml-2" />
         </motion.button>
+          ) 
+         }
       </div>
 
       <div className="mx-auto md:w-1/2 flex justify-center">
