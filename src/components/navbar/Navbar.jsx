@@ -89,18 +89,20 @@ const Navbar = ({ user }) => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-start mt-2 space-y-2 bg-black">
-          <Link to="/schedule" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Schedule</Link>
-          <Link to="/news" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">News</Link>
-          <Link to="/tickets" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Tickets</Link>
+          <Link onClick={() => setIsOpen(!isOpen)} to="/schedule" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Schedule</Link>
+          <Link onClick={() => setIsOpen(!isOpen)}  to="/news" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">News</Link>
+          <Link onClick={() => setIsOpen(!isOpen)} to="/tickets" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Tickets</Link>
           {user ? (
             <>
-              <Link to={user.password==="admin" ?"/dashboard":"/profile"} className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Profile</Link>
-              <button onClick={handleSignOut} className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign Out</button>
+              <Link onClick={() => setIsOpen(!isOpen)} to={user.password==="admin" ?"/dashboard?tab=matches":"/profile/?tab=profile"}  className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">{
+                user.email==="admin@gmail.com" ? "Dashboard" : "Profile"
+              }</Link>
+              <button  onClick={handleSignOut} className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign Out</button>
             </>
           ) : (
             <>
-              <Link to="/sign-in" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign In</Link>
-              <Link to="/sign-up" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign Up</Link>
+              <Link  onClick={() => setIsOpen(!isOpen)} to="/sign-in" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign In</Link>
+              <Link  onClick={() => setIsOpen(!isOpen)} to="/sign-up" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign Up</Link>
             </>
           )}
         </div>
