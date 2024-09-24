@@ -8,7 +8,7 @@ export default function UserProfile() {
       <h1 className='font-semibold text-3xl mb-6'>User Information</h1>
           <div className='flex  flex-col items-center gap-2 min-w-lg'>
             <img
-              src='https://randomuser.me/api/portraits/men/75.jpg' 
+              src='https://randomuser.me/api/portraits/women/21.jpg' 
               alt='profile'
               className='w-20 h-20 rounded-full object-cover'
             />

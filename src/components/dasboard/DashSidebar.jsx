@@ -12,6 +12,7 @@ import { BiCricketBall } from "react-icons/bi";
 import { BsNewspaper } from "react-icons/bs";
 import { GiCricketBat } from "react-icons/gi";
 import { MdStadium } from "react-icons/md";
+import { TiTicket } from "react-icons/ti";
 
 export default function DashSidebar() {
     const navigate = useNavigate();
@@ -41,7 +42,7 @@ export default function DashSidebar() {
             <h1 className="font-semibold text-lg mb-6">
                 {admin ? "Admin Panel" : "Welcome Back!"}
             </h1>
-            <div className="flex justify-between flex-col min-h-screen">
+            <div className="flex justify-between flex-col  md:min-h-screen">
                 <ul className="">
                     <li>
                         {
@@ -98,7 +99,7 @@ export default function DashSidebar() {
                                     : "hover:bg-gray-700"
                                     }`}
                             >
-                                <FaWindows className="text-xl" />
+                                <TiTicket className="text-xl" />
                                 My Tickets
                             </Link>
                         )}
