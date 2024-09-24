@@ -11,6 +11,7 @@ import { BsReverseListColumnsReverse } from "react-icons/bs";
 import { BiCricketBall } from "react-icons/bi";
 import { BsNewspaper } from "react-icons/bs";
 import { GiCricketBat } from "react-icons/gi";
+import { MdStadium } from "react-icons/md";
 
 export default function DashSidebar() {
     const navigate = useNavigate();
@@ -105,7 +106,7 @@ export default function DashSidebar() {
                             <Link
                                 to={`/${user.password === "admin" ? "dashborad" : "profile"
                                     }?tab=editPlayers`}
-                                className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${tab === "editPlayes"
+                                className={`p-3 rounded-lg flex items-center gap-3 transition-colors duration-200 ${tab === "editPlayers"
                                     ? "bg-green-600 text-white"
                                     : "hover:bg-gray-700"
                                     }`}
@@ -139,7 +140,7 @@ export default function DashSidebar() {
                                     }`}
                             >
                                 <BsReverseListColumnsReverse className="text-xl" />
-                                Team Matches
+                                Your Matches
                             </Link>
                         )}
                         {
@@ -168,7 +169,8 @@ export default function DashSidebar() {
                                         : "hover:bg-gray-700"
                                         }`}
                                 >
-                                    Add Stadium
+                                    <MdStadium className="text-xl" />
+                                    Add a Stadium
                                 </Link>
                             )
                         }
