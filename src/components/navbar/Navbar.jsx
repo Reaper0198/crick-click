@@ -49,7 +49,7 @@ const Navbar = ({ user }) => {
 
         {user ? (
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to={user.password==="admin" ?"/dashboard":"/profile"} className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
+            <Link to={user.password==="admin" ?"/dashboard?tab=matches":"/profile?tab=profile"} className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
               <FaUser />
               {
                 user.email==="admin@gmail.com" ? "Dashboard" : "Profile"
