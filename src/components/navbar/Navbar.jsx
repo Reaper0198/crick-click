@@ -39,7 +39,7 @@ const Navbar = ({ user }) => {
             </div>
           </form>
         </div>
-
+        <div className="hidden gap-5 nav:flex">
         {/* Links Section */}
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="/schedule" className="hover:underline">Schedule</Link>
@@ -72,8 +72,8 @@ const Navbar = ({ user }) => {
             </Link>
           </div>
         )}
-
-        <div className="md:hidden">
+          </div>
+        <div className="nav:hidden">
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isOpen ? (
@@ -88,7 +88,7 @@ const Navbar = ({ user }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-start mt-2 space-y-2 bg-black">
+        <div className="nav:hidden flex flex-col items-start mt-2 space-y-2 bg-black">
           <Link onClick={() => setIsOpen(!isOpen)} to="/schedule" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Schedule</Link>
           <Link onClick={() => setIsOpen(!isOpen)}  to="/news" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">News</Link>
           <Link onClick={() => setIsOpen(!isOpen)} to="/tickets" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Tickets</Link>
