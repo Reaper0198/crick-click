@@ -16,6 +16,7 @@ const Navbar = ({ user }) => {
 
   // Only render the navbar if the location is not "dashboard"
   if (location === 'dashboard') return null;
+  console.log(user);
 
   return (
     <nav className="bg-[rgba(0,0,0,0.6)] z-10 fixed top-0 left-0 w-full text-white px-4 py-4">
@@ -48,7 +49,7 @@ const Navbar = ({ user }) => {
 
         {user ? (
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/dashboard" className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
+            <Link to={user.password==="admin" ?"/dashboard":"/profile"} className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
               <FaUser /> Profile
             </Link>
             <button
