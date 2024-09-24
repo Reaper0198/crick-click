@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className='py-3'>
                     <div className='flex my-4'>
                         <img src={group1} className='w-8 h-8 gap-0' />
-                        <p><b className='text-3xl gap-0 '>CricClick</b></p>
+                        <p><b className='text-3xl gap-0 '>CrickClick</b></p>
                     </div>
                     <p className='leading-6 w-80'>Your go-to hub for cricket tournaments! Join us for live updates, and a vibrant community. Let the games begin!</p>
                 </div>
@@ -32,13 +32,13 @@ const Footer = () => {
                 </div>
                 <div className='leading-10'>
                     <p className='text-xl my-2'><b>Support</b></p>
-                    <p className='cursor-pointer hover:underline'>cricClick@gmail.com</p>
+                    <p className='cursor-pointer hover:underline'>crickClick@gmail.com</p>
                     <div className='flex gap-4'>
                         <FaInstagram className='text-pink-500 cursor-pointer' size={20}/>
                         <FaFacebookF className='text-blue-500 cursor-pointer' size={20}/>
                         <FaTwitter className='text-blue-500 cursor-pointer' size={20}/>
                     </div>
-                    <p>2024 © CricClick Private Limited</p>
+                    <p>2024 © CrickClick Private Limited</p>
                 </div>
             </div>
         </div>
