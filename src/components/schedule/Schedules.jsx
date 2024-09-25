@@ -1,6 +1,7 @@
 import React from "react";
 import ScheduleCard from "./ScheduleCard";
 import { motion } from "framer-motion";
+
 const Schedules = () => {
   // Array of match schedules
   const scheduleDetails = [
@@ -81,15 +82,17 @@ const Schedules = () => {
 
   return (
     <motion.div
-      className="bg-black flex flex-col justify-center items-center h-full mt-[70px]"
+      className="bg-black flex flex-col justify-center items-center h-full mt-[70px] px-4 sm:px-6 lg:px-12"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="mt-10 mb-10 bg-[#1b1b1b] rounded-[28px]">
-        <div className="title md:mx-10 sm:mx-10">Upcoming Matches:</div>
+      <div className="mt-10 mb-10 bg-[#1b1b1b] rounded-[28px] w-full max-w-screen-lg">
+        <div className="text-white title text-xl font-bold text-center !md:mx-10 !sm:mx-10">
+          Upcoming Matches:
+        </div>
         <motion.div
-          className="mt-10 flex flex-col md:px-10 py-10 gap-10"
+          className="mt-10 flex flex-col md:px-10 py-10 gap-6 sm:gap-8 lg:gap-10"
           variants={containerVariants}
         >
           {scheduleDetails.map((match, index) => (

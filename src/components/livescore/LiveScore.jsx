@@ -16,21 +16,15 @@ const LiveScore = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 768, // Adjust this value for mobile screens
+        breakpoint: 1024, // Tablets
         settings: {
-          slidesToShow: 2, // Show 2 slides on mobile
+          slidesToShow: 2,
         },
       },
       {
-        breakpoint: 1024, // Adjust this value for tablets
+        breakpoint: 768, // Mobile screens
         settings: {
-          slidesToShow: 3, // Show 3 slides on tablets
-        },
-      },
-      {
-        breakpoint: 480, // Adjust this value for smaller screens
-        settings: {
-          slidesToShow: 1, // Show 1 slide on very small screens
+          slidesToShow: 1, // Show 1 slide on smaller screens
         },
       },
     ],
@@ -95,9 +89,9 @@ const LiveScore = () => {
   ];
 
   return (
-    <div className="p-2 mt-10">
-      <div className="md:ml-40 title">Recent Matches :</div>
-      <div className="md:mx-10 mx-20">
+    <div className="p-4 mt-10">
+      <div className="text-xl md:text-2xl font-bold text-center md:ml-40 mb-4">Recent Matches:</div>
+      <div className="md:mx-10 sm:mx-6 mx-4">
         <Slider {...settings}>
           {scoreDetails.map((match, index) => (
             <div key={index}>
